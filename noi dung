@@ -1,0 +1,47 @@
+restful API
+Jquery
+Ajax
+
+middleware
+cookie                        cookie sẽ được gửi cùng request trên header
+                              data dc lưu trên trình duyệt
+
+xác thực, phân quyền
+  Xác thực
+    cookie => xác thực user => thực hiện chức năng user yêu cầu
+  
+  phân quyền => xác thực user => kiểm tra quyền của user => thực hiện chức năng nếu có đủ quyền
+jwt - token
+
+
+file app mới
+làm đủ 4 chức năng thêm, sửa, xóa, xem user
+đổi mật khẩu checkcookie => id
+getCookie => cookie = id
+ajax({url:'/api/user/'+id, type:'put', data:{username , password, newpass}})
+
+put(/api/user/:id, username , password, newpass)
+
+updateOne({_id, password, username},{password:newpass})
+
+phân quyền / check đăng nhập là các middleware/ các bước trung gian trước khi cho phép thực hiện chức năng yêu cầu
+
+lấy được role của user để quyết định có cho thực hiện chức năng hay k
+
+JWT - json web token
+
+
+bcrypt                mã hóa và so sánh
+                      mã hóa password user để k bị lộ
+
+
+async - await         chuyển code bất đồng bộ thành đồng bộ
+                      dùng thay then catch, callback
+                      dùng trong khối try - catch
+
+                      async function tên (){
+                        await
+                      }
+
+                      let x = async () =>{}
+      
