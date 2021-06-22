@@ -8,6 +8,7 @@ const TodoRouter = require('./todoRouter')
 const BlackListModel = require('./blackListModel')
 const app = express();
 const checkAuth = require('./checkAuth')
+const port= process.env.PORT||3000
 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -44,4 +45,4 @@ app.post('/api/blackList/', checkAuth.checkCookie, (req, res) => {
 })
 
 // tạo cổng nghe
-app.listen(3000);
+app.listen(port);
